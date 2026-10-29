@@ -1,17 +1,16 @@
 # Kit de práctica: Árboles en Java
 
-Repositorio de apoyo para la prueba práctica de Estructura de Datos (Unidad 3, Árboles). Reúne plantillas de código que compilan y están probadas, más la documentación para decidir rápido qué hacer ante cualquier enunciado.
+Repositorio de apoyo para la prueba práctica de Estructura de Datos (Unidad 3, Árboles): [Github-Apoyo-Prueba](https://github.com/juanchicoyunda1234/Github-Apoyo-Prueba). Reúne plantillas de código que compilan y están probadas, más la documentación para decidir rápido qué hacer ante cualquier enunciado.
 
 Todo el código está en español, en capas `modelo`, `negocio` y `app`, sin comentarios, con el mismo estilo de los repos del curso (`Nodo<T>`, `ArbolBinario`, validaciones con `IllegalArgumentException` e `IllegalStateException`).
 
 ## Qué contiene
 
 ```
-Kit-Practica-Arboles/
-  README.md
-  compilar.bat / compilar.sh        compila y corre el menú
-  probar.bat / probar.sh            corre las verificaciones automáticas del kit
-  .gitignore
+README.md
+compilar.bat / compilar.sh        compila y corre el menú
+probar.bat / probar.sh            corre las verificaciones automáticas del kit
+.gitignore
   src/
     enums/        TipoRecorrido, TipoUnidad
     estructuras/  Cola, Pila (propias, sin java.util, para recorrido por niveles)
@@ -87,19 +86,10 @@ Si en la consola de Windows las tildes salen como signos raros, ejecuta antes `c
 8. Toma las capturas y completa el informe (`docs/05-plantilla-informe.md`).
 9. Commits pequeños y con mensaje claro durante todo el proceso (`docs/06-git-y-commits.md`).
 
-## Cómo subir este kit a GitHub
+## Repositorio
 
-```
-cd Kit-Practica-Arboles
-git init
-git add .
-git commit -m "Kit de práctica de árboles en Java"
-git branch -M main
-git remote add origin https://github.com/TU-USUARIO/Kit-Practica-Arboles.git
-git push -u origin main
-```
-
-Crea antes el repositorio vacío en GitHub, sin README, para que el primer `push` no tenga conflictos.
+Puedes acceder al repositorio directamente a través del siguiente enlace:
+- [https://github.com/juanchicoyunda1234/Github-Apoyo-Prueba](https://github.com/juanchicoyunda1234/Github-Apoyo-Prueba)
 
 ## Aviso
 
