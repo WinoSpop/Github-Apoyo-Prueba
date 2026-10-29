@@ -4,7 +4,7 @@ Ejemplo: el enunciado habla de un **catálogo de libros** con clave única `isbn
 
 ## Paso 1: crea la entidad en `modelo`
 
-Parte de `Producto.java` (clave de texto) o de `Estudiante.java` (clave numérica). Copia, renombra y ajusta los campos. La clave va como `final`.
+Parte de `plantilla-base/src/modelo/Elemento.java` (clave de texto). Para ver una clave numérica o más reglas, mira `ejemplo-sistema-academico/src/modelo/Estudiante.java` y `Producto.java`. Copia, renombra y ajusta los campos. La clave va como `final`.
 
 ```java
 package modelo;
@@ -74,7 +74,7 @@ Cada regla del enunciado ("no negativo", "10 dígitos", "no vacío") se vuelve u
 
 ## Paso 2: crea el gestor en `negocio`
 
-Parte de `GestorEstudiantes.java`. Cambia el tipo de la clave, la entidad y las operaciones que pida el enunciado.
+Parte de `plantilla-base/src/negocio/GestorElementos.java` (o de `ejemplo-sistema-academico/src/negocio/GestorEstudiantes.java` si necesitas ver más operaciones). Cambia el tipo de la clave, la entidad y las operaciones que pida el enunciado.
 
 ```java
 package negocio;
@@ -133,7 +133,7 @@ Copia `app/Main.java`, cambia los gestores y las opciones del menú, y reutiliza
 
 ## Paso 6: pruebas
 
-Copia `pruebas/PruebasKit.java` como plantilla y escribe una verificación por cada regla del enunciado. Al terminar, ejecuta las pruebas, el menú y toma capturas.
+Copia `plantilla-base/src/pruebas/PruebasBase.java` como plantilla (el ejemplo grande está en `ejemplo-sistema-academico/src/pruebas/PruebasKit.java`) y escribe una verificación por cada regla del enunciado. Al terminar, ejecuta las pruebas, el menú y toma capturas.
 
 ## Lista de control del paso a paso
 
@@ -142,4 +142,4 @@ Copia `pruebas/PruebasKit.java` como plantilla y escribe una verificación por c
 - [ ] El gestor devuelve `boolean` o `null` para "no encontrado" y no imprime.
 - [ ] `Main` solo lee y muestra.
 - [ ] Los datos de prueba cubren casos normales y casos límite.
-- [ ] Borraste de tu repo lo que no uses (por ejemplo `Producto`, `Estudiante` si no los necesitas).
+- [ ] Borraste de tu repo lo que no uses (por ejemplo `Elemento` y `GestorJerarquia` si el enunciado no pide un árbol general).

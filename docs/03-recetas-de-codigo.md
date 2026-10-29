@@ -2,6 +2,8 @@
 
 Todas las recetas usan clases de este kit. El código no lleva comentarios; la explicación está en el texto.
 
+Las clases `Estudiante`, `Producto` y los gestores académicos de los ejemplos están en `ejemplo-sistema-academico/`. Los árboles genéricos son idénticos en `plantilla-base/` y en el ejemplo.
+
 ## Referencia rápida de la API
 
 ### `ArbolBinario<T>` (base, sin orden)

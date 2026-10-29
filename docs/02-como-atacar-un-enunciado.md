@@ -28,7 +28,7 @@ Si el enunciado pide las dos estructuras (como el sistema académico: jerarquía
 ## 3. Construye en este orden
 
 1. `modelo`: entidad con validaciones en el constructor y en los setters. La clave va como `final`.
-2. `estructuras` y `negocio` de árboles: se copian del kit sin tocar.
+2. `estructuras` y `negocio` de árboles: se copian de `plantilla-base/` sin tocar.
 3. Gestor de negocio: una clase por caso (por ejemplo `GestorBiblioteca`) que arma el árbol con el extractor de clave o la regla de hijo.
 4. `DatosPrueba`: al menos 8 o 10 registros que ejerciten todos los casos.
 5. `Main`: menú que solo lee datos, llama al gestor y muestra resultados.
