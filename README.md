@@ -1,20 +1,31 @@
-# Kit de práctica: Árboles en Java
+# 🌳 Kit de Práctica: Árboles en Java (V2)
 
-Repositorio de apoyo para la prueba práctica de Estructura de Datos (Unidad 3, Árboles). Reúne plantillas de código que compilan y están probadas, más la documentación para decidir rápido qué hacer ante cualquier enunciado.
+<p align="left">
+  <img src="https://img.shields.io/badge/Java-21-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java 21" />
+  <img src="https://img.shields.io/badge/Pruebas-231%20Pasadas%20(100%25)-success?style=for-the-badge" alt="Tests passing" />
+  <img src="https://img.shields.io/badge/Documentación-10%20Guías-blue?style=for-the-badge" alt="Docs" />
+  <img src="https://img.shields.io/badge/Arquitectura-Capas%20(Modelo%20%7C%20Negocio%20%7C%20App)-informational?style=for-the-badge" alt="Arquitectura" />
+</p>
 
-Todo el código está en español, en capas `modelo`, `negocio` y `app`, sin comentarios, con el mismo estilo de los repos del curso (`Nodo<T>`, `ArbolBinario`, validaciones con `IllegalArgumentException` e `IllegalStateException`).
+Repositorio de apoyo para la prueba práctica de **Estructura de Datos (Unidad 3: Árboles)**. Reúne plantillas de código listas para compilar, probadas al 100%, más documentación exhaustiva para atacar cualquier enunciado con rapidez.
 
-## Dos proyectos, un solo kit
+> **Características clave**: Todo el código está en español, estructurado en capas (`modelo`, `negocio`, `app`), sin dependencias externas (`Cola` y `Pila` propias), con nomenclatura del curso (`Nodo<T>`, `ArbolBinario`) y validaciones robustas mediante `IllegalArgumentException` e `IllegalStateException`.
 
-| Carpeta | Para qué |
-|---|---|
-| [`plantilla-base/`](plantilla-base/) | **Se empieza aquí.** Árboles genéricos más una entidad neutra (`Elemento`). Se copia y se adapta al enunciado. |
-| [`ejemplo-sistema-academico/`](ejemplo-sistema-academico/) | El mismo código aplicado a un dominio completo ya practicado (estudiantes, unidades académicas, un ABB por paralelo). Es de consulta: ver cómo se resuelve un caso real. |
-| [`docs/`](docs/) | Guías compartidas por ambos. |
+---
 
-Los archivos de `estructuras`, `enums`, `Nodo`, `NodoGeneral`, `ArbolBinario`, `ArbolBinarioBusqueda`, `ArbolGeneral` y `Transformador` son idénticos en las dos carpetas.
+## 📦 Dos proyectos, un solo kit
 
-## Estructura
+| Carpeta | Propósito | ¿Cuándo usarla? |
+|---|---|---|
+| 🚀 [`plantilla-base/`](plantilla-base/) | **Plantilla inicial limpia.** Árboles genéricos con una entidad neutra (`Elemento`). | **Empieza aquí tu examen.** Cópiala y adáptala a la entidad del enunciado. |
+| 🎓 [`ejemplo-sistema-academico/`](ejemplo-sistema-academico/) | **Proyecto completo resuelto.** Dominio académico real (`Estudiante`, `UnidadAcademica`, jerarquía general + ABB por paralelo). | **Consulta y referencia.** Ver cómo se resuelven relaciones complejas y validaciones. |
+| 📚 [`docs/`](docs/) | **10 Guías teóricas y prácticas.** | Durante todo el desarrollo, informe y sustentación. |
+
+> ℹ️ *Nota: Las implementaciones de estructuras (`Cola`, `Pila`), nodos (`Nodo`, `NodoGeneral`) y árboles (`ArbolBinario`, `ArbolBinarioBusqueda`, `ArbolGeneral`, `Transformador`) son idénticas y 100% compatibles entre ambos proyectos.*
+
+---
+
+## 📁 Estructura del repositorio
 
 ```
 README.md
@@ -41,77 +52,96 @@ ejemplo-sistema-academico/
                   NodoAcademico, GestorSistemaAcademico, DatosPrueba
     app/          Main
     pruebas/      PruebasKit
-docs/             Documentación de apoyo (ver enlaces abajo)
+docs/             10 guías compartidas de apoyo (ver enlaces abajo)
 ```
 
-### Documentación y guías del kit
+---
 
-- [docs/01-chuleta-teoria.md](docs/01-chuleta-teoria.md): Chuleta de teoría de árboles
-- [docs/02-como-atacar-un-enunciado.md](docs/02-como-atacar-un-enunciado.md): Cómo atacar un enunciado de examen
-- [docs/03-recetas-de-codigo.md](docs/03-recetas-de-codigo.md): Recetas de código listas para usar
-- [docs/04-adaptar-la-entidad.md](docs/04-adaptar-la-entidad.md): Adaptar la entidad al enunciado
-- [docs/05-plantilla-informe.md](docs/05-plantilla-informe.md): Plantilla de informe para la entrega
-- [docs/06-git-y-commits.md](docs/06-git-y-commits.md): Guía de Git y frecuencia de commits
-- [docs/07-diagramas-mermaid.md](docs/07-diagramas-mermaid.md): Generación de diagramas Mermaid
-- [docs/08-errores-y-trampas.md](docs/08-errores-y-trampas.md): Errores y trampas frecuentes
-- [docs/09-ejemplos-verificados.md](docs/09-ejemplos-verificados.md): Ejemplos completos verificados
-- [docs/10-sustentacion.md](docs/10-sustentacion.md): Preguntas frecuentes de sustentación oral
+## 📚 Documentación y guías del kit
 
-## Compilar y ejecutar
+Las guías están organizadas para consultar rápidamente según la fase del examen:
 
-Entrar a la carpeta del proyecto (`plantilla-base` o `ejemplo-sistema-academico`).
+### 📖 Fase 1: Análisis y Modelado
+- 📄 [docs/01-chuleta-teoria.md](docs/01-chuleta-teoria.md) — Chuleta rápida de teoría de árboles (definiciones, alturas, propiedades).
+- 📄 [docs/02-como-atacar-un-enunciado.md](docs/02-como-atacar-un-enunciado.md) — Metodología paso a paso para desglosar el enunciado.
+- 📄 [docs/04-adaptar-la-entidad.md](docs/04-adaptar-la-entidad.md) — Cómo transformar `Elemento` en la entidad requerida en ~10 minutos.
 
-Windows (PowerShell o cmd):
+### 🛠️ Fase 2: Implementación y Código
+- 📄 [docs/03-recetas-de-codigo.md](docs/03-recetas-de-codigo.md) — Recetas listas para copiar y pegar (búsquedas, eliminaciones, recorridos).
+- 📄 [docs/07-diagramas-mermaid.md](docs/07-diagramas-mermaid.md) — Plantillas para generar diagramas Mermaid del árbol para el informe.
+- 📄 [docs/08-errores-y-trampas.md](docs/08-errores-y-trampas.md) — Errores típicos y trampas comunes en la prueba práctica.
+- 📄 [docs/09-ejemplos-verificados.md](docs/09-ejemplos-verificados.md) — Ejemplos completos verificados de extremo a extremo.
 
+### 🎯 Fase 3: Entrega y Sustentación
+- 📄 [docs/05-plantilla-informe.md](docs/05-plantilla-informe.md) — Plantilla preformateada para el informe final de entrega.
+- 📄 [docs/06-git-y-commits.md](docs/06-git-y-commits.md) — Guía de commits pequeños, mensajes claros y buenas prácticas en Git.
+- 📄 [docs/10-sustentacion.md](docs/10-sustentacion.md) — Banco de preguntas modelo y respuestas para la defensa oral.
+
+---
+
+## ⚡ Compilar y ejecutar
+
+Accede a la carpeta del proyecto en el que vayas a trabajar ([`plantilla-base/`](plantilla-base/) o [`ejemplo-sistema-academico/`](ejemplo-sistema-academico/)).
+
+### En Windows (PowerShell o CMD):
 ```cmd
 cd plantilla-base
 compilar.bat
 probar.bat
 ```
 
-Linux o macOS:
-
+### En Linux / macOS:
 ```bash
 cd plantilla-base
 sh compilar.sh
 sh probar.sh
 ```
 
-Si en la consola de Windows las tildes salen como signos raros, ejecuta antes `chcp 65001`. En VS Code, abre la carpeta `src` del proyecto correspondiente y ejecuta `app.Main`.
+> 💡 **Tip para Windows**: Si en la consola los acentos o caracteres especiales aparecen distorsionados, ejecuta previamente `chcp 65001`. En VS Code, abre la carpeta `src` del proyecto deseado como proyecto Java y ejecuta `app.Main`.
 
-## Mapa rápido: me piden X, uso Y
+---
 
-| Me piden | Uso | Dónde |
+## 🗺️ Mapa rápido: "Me piden X ➔ Uso Y"
+
+| Requerimiento del enunciado | Estructura / Método | Ubicación recomendada |
 |---|---|---|
-| Árbol binario con hijo izquierdo y derecho a mano | `ArbolBinario<T>` con `crearRaiz`, `agregarIzquierdo`, `agregarDerecho` | [`plantilla-base/src/negocio/ArbolBinario.java`](plantilla-base/src/negocio/ArbolBinario.java) |
-| Árbol de búsqueda por una clave (matrícula, código, cédula) | `ArbolBinarioBusqueda<K, T>` con el extractor de clave | [`plantilla-base/src/negocio/ArbolBinarioBusqueda.java`](plantilla-base/src/negocio/ArbolBinarioBusqueda.java) |
-| Jerarquía con cualquier número de hijos (organigrama, categorías, carpetas) | `ArbolGeneral<T>` | [`plantilla-base/src/negocio/ArbolGeneral.java`](plantilla-base/src/negocio/ArbolGeneral.java) |
-| Una regla de qué puede colgar de qué | Constructor `new ArbolGeneral<>((padre, hijo) -> ...)` | [`ejemplo-sistema-academico/src/negocio/GestorOrganizacion.java`](ejemplo-sistema-academico/src/negocio/GestorOrganizacion.java) |
-| Insertar sin repetidos, buscar, modificar, eliminar | `insertar`, `buscar`, `modificar`, `eliminar` del ABB | [`plantilla-base/src/negocio/ArbolBinarioBusqueda.java`](plantilla-base/src/negocio/ArbolBinarioBusqueda.java) |
-| Preorden, inorden, posorden, por niveles | `recorrer(TipoRecorrido.X)` | [`ArbolBinario`](plantilla-base/src/negocio/ArbolBinario.java), [`ArbolGeneral`](plantilla-base/src/negocio/ArbolGeneral.java) |
-| Traza o prueba de escritorio del recorrido | `trazaRecorrido(tipo)` | [`plantilla-base/src/negocio/ArbolBinario.java`](plantilla-base/src/negocio/ArbolBinario.java) |
-| Dibujar el árbol en consola para la captura | `mostrarEstructura()`, `mostrarLateral()`, `mostrarJerarquia()` | los tres árboles |
-| Altura, contar nodos, contar hojas, nivel, grado | `altura`, `contarNodos`, `contarHojas`, `nivelDe`, `gradoDe` | los tres árboles |
-| Menor, mayor, promedio, rango, k-ésimo, sucesor | `menor`, `mayor`, `promedio`, `rango`, `kEsimo`, `sucesorDe` | [`plantilla-base/src/negocio/ArbolBinarioBusqueda.java`](plantilla-base/src/negocio/ArbolBinarioBusqueda.java) |
-| Eliminar solo si no tiene subunidades (regla A5) | `eliminar(condicion)` del árbol general | [`plantilla-base/src/negocio/ArbolGeneral.java`](plantilla-base/src/negocio/ArbolGeneral.java) |
-| Pasar de árbol general a binario (primer hijo izquierdo, hermano derecho) | `aBinario()` o `Transformador.aBinario` | [`plantilla-base/src/negocio/Transformador.java`](plantilla-base/src/negocio/Transformador.java) |
-| Volver de binario a general | `Transformador.aGeneral` | [`plantilla-base/src/negocio/Transformador.java`](plantilla-base/src/negocio/Transformador.java) |
-| Filtrar o contar por una condición | `filtrar(x -> ...)`, `contarSi(x -> ...)` | [`ArbolBinario`](plantilla-base/src/negocio/ArbolBinario.java), [`ArbolGeneral`](plantilla-base/src/negocio/ArbolGeneral.java) |
-| Árbol general donde cada hoja guarda su propio ABB | `GestorSistemaAcademico` y `NodoAcademico` | [`ejemplo-sistema-academico/src/negocio/`](ejemplo-sistema-academico/src/negocio/) |
-| Menú de consola | Copiar `app/Main.java` y cambiar los gestores | [`plantilla-base/src/app/Main.java`](plantilla-base/src/app/Main.java) |
-| Preguntas de sustentación oral | Respuestas modelo | [`docs/10-sustentacion.md`](docs/10-sustentacion.md) |
+| **Árbol binario manual** (hijo izq/der específico) | `ArbolBinario<T>` con `crearRaiz`, `agregarIzquierdo`, `agregarDerecho` | [`plantilla-base/src/negocio/ArbolBinario.java`](plantilla-base/src/negocio/ArbolBinario.java) |
+| **Árbol de búsqueda por clave única** (código, ID, etc.) | `ArbolBinarioBusqueda<K, T>` con extractor de clave | [`plantilla-base/src/negocio/ArbolBinarioBusqueda.java`](plantilla-base/src/negocio/ArbolBinarioBusqueda.java) |
+| **Jerarquía n-aria** (organigramas, categorías, carpetas) | `ArbolGeneral<T>` | [`plantilla-base/src/negocio/ArbolGeneral.java`](plantilla-base/src/negocio/ArbolGeneral.java) |
+| **Validar qué hijo puede colgar de qué padre** | Constructor con validador `new ArbolGeneral<>((padre, hijo) -> ...)` | [`ejemplo-sistema-academico/src/negocio/GestorOrganizacion.java`](ejemplo-sistema-academico/src/negocio/GestorOrganizacion.java) |
+| **CRUD en ABB** (insertar sin duplicados, buscar, modificar, eliminar) | `insertar`, `buscar`, `modificar`, `eliminar` | [`plantilla-base/src/negocio/ArbolBinarioBusqueda.java`](plantilla-base/src/negocio/ArbolBinarioBusqueda.java) |
+| **Recorridos estándar** (preorden, inorden, posorden, niveles) | `recorrer(TipoRecorrido.X)` | [`ArbolBinario`](plantilla-base/src/negocio/ArbolBinario.java) / [`ArbolGeneral`](plantilla-base/src/negocio/ArbolGeneral.java) |
+| **Traza / prueba de escritorio de recorrido** | `trazaRecorrido(tipo)` | [`plantilla-base/src/negocio/ArbolBinario.java`](plantilla-base/src/negocio/ArbolBinario.java) |
+| **Dibujar el árbol en consola para capturas** | `mostrarEstructura()`, `mostrarLateral()`, `mostrarJerarquia()` | Disponible en las tres clases de árbol |
+| **Métricas** (altura, total nodos, total hojas, nivel, grado) | `altura`, `contarNodos`, `contarHojas`, `nivelDe`, `gradoDe` | Disponible en las tres clases de árbol |
+| **Estadísticas de ABB** (mínimo, máximo, promedio, rango, k-ésimo) | `menor`, `mayor`, `promedio`, `rango`, `kEsimo`, `sucesorDe` | [`plantilla-base/src/negocio/ArbolBinarioBusqueda.java`](plantilla-base/src/negocio/ArbolBinarioBusqueda.java) |
+| **Eliminar solo si es hoja** (regla estándar árbol general) | `eliminar(condicion)` | [`plantilla-base/src/negocio/ArbolGeneral.java`](plantilla-base/src/negocio/ArbolGeneral.java) |
+| **Transformación a binario** (hijo izq, hermano der) | `aBinario()` o `Transformador.aBinario` | [`plantilla-base/src/negocio/Transformador.java`](plantilla-base/src/negocio/Transformador.java) |
+| **Transformación inversa** (binario a general) | `Transformador.aGeneral` | [`plantilla-base/src/negocio/Transformador.java`](plantilla-base/src/negocio/Transformador.java) |
+| **Filtrar o contar con condición personalizada** | `filtrar(x -> ...)`, `contarSi(x -> ...)` | [`ArbolBinario`](plantilla-base/src/negocio/ArbolBinario.java) / [`ArbolGeneral`](plantilla-base/src/negocio/ArbolGeneral.java) |
+| **Árbol general donde cada hoja contiene un ABB propio** | Jerarquía general combinada con ABB | Ver implementación en [`ejemplo-sistema-academico/src/negocio/`](ejemplo-sistema-academico/src/negocio/) |
+| **Menú interactivo de consola** | Menú con switch y lector de datos | [`plantilla-base/src/app/Main.java`](plantilla-base/src/app/Main.java) |
+| **Preguntas teóricas de sustentación oral** | Respuestas modelo argumentadas | [`docs/10-sustentacion.md`](docs/10-sustentacion.md) |
 
-## Flujo recomendado durante la prueba
+---
 
-1. Lee el enunciado completo y subraya entidades, reglas y operaciones ([docs/02-como-atacar-un-enunciado.md](docs/02-como-atacar-un-enunciado.md)).
-2. Crea un repositorio nuevo para la prueba y copia [`plantilla-base/`](plantilla-base/) (o solo lo que necesites).
-3. Primer commit con la estructura de carpetas, el README y el `.gitignore`.
-4. Adapta la entidad ([docs/04-adaptar-la-entidad.md](docs/04-adaptar-la-entidad.md)), que tarda unos 10 minutos.
-5. Ajusta el gestor de negocio y los datos de prueba a tu caso.
-6. Adapta `Main` y prueba cada opción del menú.
-7. Toma las capturas y completa el informe ([docs/05-plantilla-informe.md](docs/05-plantilla-informe.md)).
-8. Commits pequeños y con mensaje claro durante todo el proceso ([docs/06-git-y-commits.md](docs/06-git-y-commits.md)).
+## 🚀 Flujo recomendado durante la prueba
 
-## Aviso
+1. **Lectura y desglose**: Lee el enunciado y subraya entidades, claves únicas, jerarquías y operaciones requeridas ([docs/02-como-atacar-un-enunciado.md](docs/02-como-atacar-un-enunciado.md)).
+2. **Preparar el proyecto**: Copia [`plantilla-base/`](plantilla-base/) a tu nuevo repositorio de examen.
+3. **Commit inicial**: Sube la estructura limpia con README y `.gitignore` ([docs/06-git-y-commits.md](docs/06-git-y-commits.md)).
+4. **Adaptar entidad**: Transforma `Elemento` en tu entidad (`Libro`, `Vehículo`, `Paciente`, etc.) con validaciones ([docs/04-adaptar-la-entidad.md](docs/04-adaptar-la-entidad.md)).
+5. **Configurar el gestor**: Ajusta `GestorElementos` o `GestorJerarquia` con las reglas de negocio del caso.
+6. **Datos de prueba**: En `DatosPrueba.java`, carga al menos 8-10 registros balanceados para probar casos normales y límites.
+7. **Menú de usuario**: Adapta `Main.java` conectando cada opción del menú a los métodos del gestor.
+8. **Pruebas y capturas**: Ejecuta las verificaciones automáticas, abre el menú y toma capturas para el informe ([docs/05-plantilla-informe.md](docs/05-plantilla-informe.md)).
+9. **Commits constantes**: Realiza commits con mensajes descriptivos tras cada hito completado ([docs/06-git-y-commits.md](docs/06-git-y-commits.md)).
 
-Las plantillas están pensadas para que entiendas cada método y puedas sustentarlo. Antes de la prueba, lee [docs/01-chuleta-teoria.md](docs/01-chuleta-teoria.md) y ejecuta el menú para ver cómo se comporta cada operación. El código que entregues debe ser el que entiendes y puedes explicar.
+---
+
+## ⚠️ Aviso y recomendaciones
+
+Las plantillas están diseñadas para que comprendas en profundidad cada método algorítmico y puedas defender tu código en la sustentación oral. Antes de la prueba:
+- Revisa los fundamentos teóricos en [docs/01-chuleta-teoria.md](docs/01-chuleta-teoria.md).
+- Ejecuta el menú de ambos proyectos para familiarizarte con las salidas visuales (`mostrarEstructura()`, recorridos, etc.).
+- Recuerda que todo código presentado debe ser comprensible y explicable por ti mismo.
